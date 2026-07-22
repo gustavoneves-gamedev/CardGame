@@ -188,10 +188,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &15534018
 Transform:
@@ -826,10 +826,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &109937479
 Transform:
@@ -970,10 +970,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &135716858
 Transform:
@@ -3368,10 +3368,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &430302489
 Transform:
@@ -5209,10 +5209,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &628711719
 Transform:
@@ -7646,10 +7646,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &918762423
 Transform:
@@ -8375,10 +8375,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &984601438
 Transform:
@@ -12392,7 +12392,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -17374,10 +17374,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!65 &2026990195
 BoxCollider:
@@ -17469,10 +17469,10 @@ MonoBehaviour:
   handPosition: 0
   whatIsDesktop:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   whatIsPlacement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   assignPlace: {fileID: 0}
 --- !u!4 &2048584694
 Transform:
