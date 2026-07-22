@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44c4d13a4da3984785183fef20b99fc, type: 3}
+  m_Name: Dullahan
+  m_EditorClassIdentifier: Assembly-CSharp::CardScriptableObject
+  cardName: Dullahan
+  actionDescription: This is the third card
+  cardLore: Card for testing
+  attackPower: 3
+  currentHealth: 15
+  manaCost: 8
+  characterSprite: {fileID: 21300000, guid: 64a89e5a9f7477843b034f6f2177a21f, type: 3}
+  bgSprite: {fileID: 21300000, guid: 9a53423e1070e0b4eb9ea804c1e77641, type: 3}
