@@ -116,6 +116,8 @@ public class Card : MonoBehaviour
                         //cardCollider.enabled = true; //Não consigo mais interagir com a carta
                         //isso pode ser alterado futuramente
 
+                        BattleController.battleController.SpendPlayerMana(manaCost);
+
                         handController.RemoveCardFromHand(this);
                     }
                     else
@@ -167,7 +169,7 @@ public class Card : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (inHand)
+        if (inHand && manaCost < BattleController.battleController.playerMana)
         {
             isSelected = true;
             cardCollider.enabled = false;

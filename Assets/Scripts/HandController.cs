@@ -3,11 +3,25 @@ using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
+    public static HandController handController;
+
     public List<Card> heldCards = new List<Card>();
 
     public Transform minPos, maxPos;
 
     public List<Vector3> cardPositions = new List<Vector3>();
+
+    private void Awake()
+    {
+        if (handController == null)
+        {
+            handController = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,5 +76,11 @@ public class HandController : MonoBehaviour
         }
 
         //SetCardPositionInHand(); Professor colocou aqui por algum motivo
+    }
+
+    public void AddCardToHand(Card cardToAdd)
+    {
+        heldCards.Add(cardToAdd);
+        SetCardPositionInHand();
     }
 }
