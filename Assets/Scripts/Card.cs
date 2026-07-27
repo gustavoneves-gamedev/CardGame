@@ -169,13 +169,17 @@ public class Card : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (inHand && manaCost < BattleController.battleController.playerMana)
+        if (inHand && manaCost <= BattleController.battleController.playerMana)
         {
             isSelected = true;
             cardCollider.enabled = false;
 
             justPressed = true;
             //inHand = false;
+        }
+        else if (manaCost > BattleController.battleController.playerMana)
+        {
+            UIController.uiController.ShowManaWarning();
         }
     }
 
