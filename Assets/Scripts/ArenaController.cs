@@ -8,7 +8,7 @@ public class ArenaController : MonoBehaviour
 
     [SerializeField] private CardPlacePoint[] arenaSlots;
     public CardPlacePoint[,] arena = new CardPlacePoint[5, 5];
-    public bool[,] virtualArena = new bool[7, 7];
+    public bool[,] virtualArena = new bool[11, 11];
 
     private void Awake()
     {
@@ -30,13 +30,19 @@ public class ArenaController : MonoBehaviour
 
     public void SetArena()
     {
+        int counter = 0;
+        
         for (int i = 0; i < arena.GetLength(0); i++)
         {
             for (int j = 0; j < arena.GetLength(1); j++)
             {
-                arena[i, j] = arenaSlots[i + j];
+                if (counter >= arenaSlots.Length) return;
+
+                arena[i, j] = arenaSlots[counter];
                 arena[i, j].line = i;
                 arena[i, j].row = j;
+
+                counter++;
             }
         }
 
@@ -44,7 +50,7 @@ public class ArenaController : MonoBehaviour
         {
             for (int j = 0; j < virtualArena.GetLength(1); j++)
             {
-                if (i == 0 || j == 0 || i == virtualArena.GetLength(0) - 1 || j == virtualArena.GetLength(1) - 1)
+                if (i < 3 || j < 3 || i > virtualArena.GetLength(0) - 4 || j > virtualArena.GetLength(1) - 4)
                 {
                     virtualArena[i, j] = false;
                 }
@@ -60,16 +66,16 @@ public class ArenaController : MonoBehaviour
     public void UpdateArena(int line, int row)
     {
        
-        virtualArena[line + 1, row + 1] = false;
+        virtualArena[line + 3, row + 3] = false;
         
     }
 
-    public void ShowAvaiablePositions(Card card, int movement = 1)
+    public void ShowAvaiablePositions(Card card, int movement = 2)
     {
         int line = card.assignPlace.line;
         int row = card.assignPlace.row;
-        int virtualLine = line + 1;
-        int virtualRow = row + 1;
+        int virtualLine = line + 3;
+        int virtualRow = row + 3;
        
 
         for (int i = 0; i < movement + 1; i++)
