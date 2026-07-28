@@ -60,7 +60,7 @@ public class UIController : MonoBehaviour
     public void DrawCard()
     {
 
-        DeckController.deckController.DrawCardForMana();
+        BattleController.battleController.deckController.DrawCardForMana();
     }
 
     public void EndPlayerTurn()

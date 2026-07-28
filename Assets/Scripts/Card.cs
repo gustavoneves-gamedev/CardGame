@@ -104,7 +104,7 @@ public class Card : MonoBehaviour
                 {
                     CardPlacePoint selectedPoint = hit.collider.GetComponent<CardPlacePoint>();
 
-                    if (selectedPoint.activeCard == null && selectedPoint.isPlayerPoint)
+                    if (selectedPoint.activeCard == null && selectedPoint.canSpawnHere)
                     {
                         selectedPoint.activeCard = this;
                         assignPlace = selectedPoint;
@@ -117,7 +117,7 @@ public class Card : MonoBehaviour
                         //isso pode ser alterado futuramente
 
                         BattleController.battleController.SpendPlayerMana(manaCost);
-
+                        HandController.handController.isHovering = false;
                         handController.RemoveCardFromHand(this);
                     }
                     else
@@ -149,11 +149,11 @@ public class Card : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Debug.Log("Fui chamado");
-
-        if (inHand && handController != null)
+        
+        if (inHand && handController != null && !HandController.handController.isHovering)
         {
-            MoveToPoint(handController.cardPositions[handPosition] + new Vector3(0f, 1f, 0.5f), Quaternion.identity);
+            MoveToPoint(handController.cardPositions[handPosition] + new Vector3(-0.15f, 0.2f, .5f), Quaternion.identity);
+            HandController.handController.isHovering = true;
         }
     }
 
@@ -164,7 +164,14 @@ public class Card : MonoBehaviour
         if (inHand && handController != null)
         {
             MoveToPoint(handController.cardPositions[handPosition], handController.minPos.rotation);
+            //Invoke("OnUnhovering", .1f);
+            HandController.handController.isHovering = false;
         }
+    }
+
+    private void OnUnhovering()
+    {
+        HandController.handController.isHovering = false;
     }
 
     private void OnMouseDown()
@@ -186,6 +193,7 @@ public class Card : MonoBehaviour
     public void ReturnToHand()
     {
         isSelected = false;
+        HandController.handController.isHovering = false;
         cardCollider.enabled = true;
         //inHand = true;
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeckController : MonoBehaviour
 {
-    public static DeckController deckController;
+    //public static DeckController deckController;
 
     public List<CardScriptableObject> deckToUse = new List<CardScriptableObject>();
 
@@ -16,23 +16,19 @@ public class DeckController : MonoBehaviour
 
     public float waitBetweenDrawingCards = .25f;
 
-
-    private void Awake()
-    {
-        if (deckController == null)
-        {
-            deckController = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
-    }
+    [Header("Visual Deck config")]
+    [SerializeField] private GameObject cardVisual;
+    private Transform deckBasePosition;
+    [SerializeField] private List<GameObject> visualDeckCards = new List<GameObject>();
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        BattleController.battleController.deckController = this;
+
+        deckBasePosition = transform;
+        
         SetupDeck();
     }
 
@@ -63,20 +59,36 @@ public class DeckController : MonoBehaviour
 
             interations++;
         }
+
+        SetDeckCardsVisuals();
+    }
+
+    private void SetDeckCardsVisuals()
+    {
+        for (int i = 0; i < activeCards.Count; i++)
+        {
+            GameObject obj = Instantiate(cardVisual, transform.position + (Vector3.up * i * 0.02f), transform.rotation);
+            visualDeckCards.Add(obj);
+        }
+    }
+
+    private void UpdateDeckCardsVisuals(int amountToReduce = 1)
+    {
+        Destroy(visualDeckCards[visualDeckCards.Count - 1]);
+        visualDeckCards.RemoveAt(visualDeckCards.Count-1);
     }
 
     public void DrawCardToHand()
     {
-        if (activeCards.Count == 0)
-        {
-            SetupDeck();
-        }
+        if (activeCards.Count <= 0) return;
+        
 
-        Card newCard = Instantiate(cardToSpawn, transform.position, transform.rotation);
+        Card newCard = Instantiate(cardToSpawn, visualDeckCards[visualDeckCards.Count - 1].transform.position, transform.rotation);
         newCard.cardSO = activeCards[0];
         newCard.SetupCard();
 
         activeCards.RemoveAt(0);
+        UpdateDeckCardsVisuals();
 
         HandController.handController.AddCardToHand(newCard);
 

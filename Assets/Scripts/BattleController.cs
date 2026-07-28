@@ -12,6 +12,8 @@ public class BattleController : MonoBehaviour
     public int startingCardsAmount = 5;
     public int cardsToDrawPerTurn = 2;
 
+    public DeckController deckController;
+
     public enum TurnOrder { playerActive, playerCardAttacks, enemyActive, enemyCardAttacks }
     public TurnOrder currentPhase;
 
@@ -34,7 +36,13 @@ public class BattleController : MonoBehaviour
         currentPlayerMaxMana = startingMana;
         FillPlayerMana();
 
-        DeckController.deckController.DrawMultipleCards(startingCardsAmount);
+        Invoke("Initialize", .2f);
+    }
+
+    private void Initialize()
+    {
+        deckController.DrawMultipleCards(startingCardsAmount);
+
     }
 
 
@@ -85,7 +93,7 @@ public class BattleController : MonoBehaviour
 
                 FillPlayerMana();
 
-                DeckController.deckController.DrawMultipleCards(cardsToDrawPerTurn);
+                deckController.DrawMultipleCards(cardsToDrawPerTurn);
 
                 break;
 

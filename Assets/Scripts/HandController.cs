@@ -11,6 +11,8 @@ public class HandController : MonoBehaviour
 
     public List<Vector3> cardPositions = new List<Vector3>();
 
+    public bool isHovering;
+
     private void Awake()
     {
         if (handController == null)
