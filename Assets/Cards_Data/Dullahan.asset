@@ -17,6 +17,6 @@ MonoBehaviour:
   cardLore: Card for testing
   attackPower: 3
   currentHealth: 15
-  manaCost: 8
+  manaCost: 4
   characterSprite: {fileID: 21300000, guid: 64a89e5a9f7477843b034f6f2177a21f, type: 3}
   bgSprite: {fileID: 21300000, guid: 9a53423e1070e0b4eb9ea804c1e77641, type: 3}
