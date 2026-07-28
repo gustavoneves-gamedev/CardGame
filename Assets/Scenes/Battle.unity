@@ -2102,6 +2102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 771568934}
+  - component: {fileID: 771568935}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -2126,6 +2127,44 @@ Transform:
   - {fileID: 1246032257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771568935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771568933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06843cf7166976498e18dd8b0558c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArenaController
+  arenaSlots:
+  - {fileID: 1423174445}
+  - {fileID: 1693556859}
+  - {fileID: 2011907650}
+  - {fileID: 478171436}
+  - {fileID: 1694141708}
+  - {fileID: 278685400}
+  - {fileID: 645640356}
+  - {fileID: 354838283}
+  - {fileID: 741289069}
+  - {fileID: 1950892860}
+  - {fileID: 682851260}
+  - {fileID: 1065403913}
+  - {fileID: 130809498}
+  - {fileID: 1744267808}
+  - {fileID: 59938503}
+  - {fileID: 1324270501}
+  - {fileID: 175985700}
+  - {fileID: 996928836}
+  - {fileID: 912223686}
+  - {fileID: 966768915}
+  - {fileID: 1760246168}
+  - {fileID: 490872682}
+  - {fileID: 1798081638}
+  - {fileID: 2011486258}
+  - {fileID: 1523970359}
 --- !u!1 &828274618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3298,7 @@ MonoBehaviour:
   startingCardsAmount: 10
   cardsToDrawPerTurn: 2
   deckController: {fileID: 0}
+  handController: {fileID: 0}
   currentPhase: 0
 --- !u!4 &1271501290
 Transform:

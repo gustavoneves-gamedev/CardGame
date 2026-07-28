@@ -13,6 +13,7 @@ public class BattleController : MonoBehaviour
     public int cardsToDrawPerTurn = 2;
 
     public DeckController deckController;
+    public HandController handController;
 
     public enum TurnOrder { playerActive, playerCardAttacks, enemyActive, enemyCardAttacks }
     public TurnOrder currentPhase;
@@ -42,16 +43,15 @@ public class BattleController : MonoBehaviour
     private void Initialize()
     {
         deckController.DrawMultipleCards(startingCardsAmount);
-
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            AdvanceTurn();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    AdvanceTurn();
+        //}
     }
 
     public void SpendPlayerMana(int amountToSpend)

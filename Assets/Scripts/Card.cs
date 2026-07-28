@@ -48,8 +48,15 @@ public class Card : MonoBehaviour
     {
         SetupCard();
 
-        handController = FindFirstObjectByType<HandController>();
+        Invoke("Initialize", .2f);
+
+        //handController = BattleController.battleController.handController;
         cardCollider = GetComponent<Collider>();
+    }
+
+    private void Initialize()
+    {
+        handController = BattleController.battleController.handController;
     }
 
     public void SetupCard()
@@ -117,7 +124,8 @@ public class Card : MonoBehaviour
                         //isso pode ser alterado futuramente
 
                         BattleController.battleController.SpendPlayerMana(manaCost);
-                        HandController.handController.isHovering = false;
+                        //HandController.handController.isHovering = false;
+                        handController.isHovering = false;
                         handController.RemoveCardFromHand(this);
                     }
                     else
@@ -150,10 +158,10 @@ public class Card : MonoBehaviour
     private void OnMouseOver()
     {
         
-        if (inHand && handController != null && !HandController.handController.isHovering)
+        if (inHand && handController != null && !handController.isHovering)
         {
             MoveToPoint(handController.cardPositions[handPosition] + new Vector3(-0.15f, 0.2f, .5f), Quaternion.identity);
-            HandController.handController.isHovering = true;
+            handController.isHovering = true;
         }
     }
 
@@ -165,13 +173,13 @@ public class Card : MonoBehaviour
         {
             MoveToPoint(handController.cardPositions[handPosition], handController.minPos.rotation);
             //Invoke("OnUnhovering", .1f);
-            HandController.handController.isHovering = false;
+            handController.isHovering = false;
         }
     }
 
     private void OnUnhovering()
     {
-        HandController.handController.isHovering = false;
+        handController.isHovering = false;
     }
 
     private void OnMouseDown()
@@ -193,7 +201,7 @@ public class Card : MonoBehaviour
     public void ReturnToHand()
     {
         isSelected = false;
-        HandController.handController.isHovering = false;
+        handController.isHovering = false;
         cardCollider.enabled = true;
         //inHand = true;
 

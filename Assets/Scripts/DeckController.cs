@@ -90,7 +90,7 @@ public class DeckController : MonoBehaviour
         activeCards.RemoveAt(0);
         UpdateDeckCardsVisuals();
 
-        HandController.handController.AddCardToHand(newCard);
+        BattleController.battleController.handController.AddCardToHand(newCard);
 
     }
 

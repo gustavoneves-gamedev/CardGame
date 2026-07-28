@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
-    public static HandController handController;
-
+    
     public List<Card> heldCards = new List<Card>();
 
     public Transform minPos, maxPos;
@@ -13,22 +12,14 @@ public class HandController : MonoBehaviour
 
     public bool isHovering;
 
-    private void Awake()
-    {
-        if (handController == null)
-        {
-            handController = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
-    }
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SetCardPositionInHand();
+        BattleController.battleController.handController = this;
+        
+        //SetCardPositionInHand();
     }
 
     // Update is called once per frame
@@ -37,7 +28,7 @@ public class HandController : MonoBehaviour
 
     }
 
-    public void SetCardPositionInHand()
+    private void SetCardPositionInHand()
     {
         cardPositions.Clear();
 
