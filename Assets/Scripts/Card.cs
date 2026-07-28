@@ -38,6 +38,7 @@ public class Card : MonoBehaviour
     private bool isSelected;
     private bool justPressed; //Serve para controlar o primeiro clique. Testar fazer o primeiro clique funcionar no
                               // update com Input.GetMouseButtonDown(0)
+    public bool isOnArena;
     private Collider cardCollider;
     public LayerMask whatIsDesktop;
     public LayerMask whatIsPlacement;
@@ -115,17 +116,19 @@ public class Card : MonoBehaviour
                     {
                         selectedPoint.activeCard = this;
                         assignPlace = selectedPoint;
+                        assignPlace.UpdateArena();
 
                         MoveToPoint(selectedPoint.transform.position, Quaternion.identity);
 
                         inHand = false;
                         isSelected = false;
-                        //cardCollider.enabled = true; //Não consigo mais interagir com a carta
+                        cardCollider.enabled = true; //Não consigo mais interagir com a carta
                         //isso pode ser alterado futuramente
 
                         BattleController.battleController.SpendPlayerMana(manaCost);
                         //HandController.handController.isHovering = false;
                         handController.isHovering = false;
+                        isOnArena = true;
                         handController.RemoveCardFromHand(this);
                     }
                     else
@@ -163,6 +166,10 @@ public class Card : MonoBehaviour
             MoveToPoint(handController.cardPositions[handPosition] + new Vector3(-0.15f, 0.2f, .5f), Quaternion.identity);
             handController.isHovering = true;
         }
+        else if (isOnArena)
+        {
+            assignPlace.ShowAvaiablePositions();
+        }
     }
 
     private void OnMouseExit()
@@ -174,6 +181,10 @@ public class Card : MonoBehaviour
             MoveToPoint(handController.cardPositions[handPosition], handController.minPos.rotation);
             //Invoke("OnUnhovering", .1f);
             handController.isHovering = false;
+        }
+        else if (isOnArena)
+        {
+           // assignPlace.ShowAvaiablePositions();
         }
     }
 
