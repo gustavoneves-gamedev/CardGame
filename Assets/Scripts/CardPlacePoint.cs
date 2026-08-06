@@ -6,6 +6,13 @@ public class CardPlacePoint : MonoBehaviour
     public Card activeCard;
     public bool canSpawnHere;
     public int line, row;
+
+    public bool isPlayerAttackLane;
+    public bool isPlayerDefenseLane;
+    public bool isEnemyAttackLane;
+    public bool isEnemyDefenseLane;
+    public bool isTerrainLane;
+
     private SpriteRenderer image;
     private Color defaultColor;
     private Color changeColor = Color.green;
@@ -28,14 +35,14 @@ public class CardPlacePoint : MonoBehaviour
         }
     }
 
-    public void UpdateArena()
-    {
-        ArenaController.arenaController.UpdateArena(line, row);
-    }
+    //public void UpdateArena()
+    //{
+    //    ArenaController.arenaController.UpdateArena(line, row);
+    //}
 
-    public void ShowAvaiablePositions()
-    {
-        ArenaController.arenaController.ShowAvaiablePositions(activeCard);
-    }
+    //public void ShowAvaiablePositions()
+    //{
+    //    ArenaController.arenaController.ShowAvaiablePositions(activeCard);
+    //}
 
 }

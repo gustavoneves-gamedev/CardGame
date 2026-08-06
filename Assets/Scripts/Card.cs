@@ -116,7 +116,7 @@ public class Card : MonoBehaviour
                     {
                         selectedPoint.activeCard = this;
                         assignPlace = selectedPoint;
-                        assignPlace.UpdateArena();
+                        //assignPlace.UpdateArena();
 
                         MoveToPoint(selectedPoint.transform.position, Quaternion.identity);
 
@@ -168,7 +168,7 @@ public class Card : MonoBehaviour
         }
         else if (isOnArena)
         {
-            assignPlace.ShowAvaiablePositions();
+           // assignPlace.ShowAvaiablePositions();
         }
     }
 

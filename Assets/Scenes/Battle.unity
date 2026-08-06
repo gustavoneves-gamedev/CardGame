@@ -249,6 +249,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 1
 --- !u!1 &130809494
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +384,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 1
 --- !u!1 &175985696
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +494,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -509,6 +519,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 1
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +893,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -903,6 +918,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 1
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &294573594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1263,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -1268,6 +1288,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 1
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &444231922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1408,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -1408,6 +1433,11 @@ MonoBehaviour:
   canSpawnHere: 1
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 1
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!65 &478171437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1565,7 +1595,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -1590,6 +1620,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 1
+  isTerrainLane: 0
 --- !u!1 &645640352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1730,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -1720,6 +1755,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 1
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &671662515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +2023,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 1
 --- !u!1 &741289065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,7 +2133,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -2113,6 +2158,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 1
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &771568933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,22 +2209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06843cf7166976498e18dd8b0558c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArenaController
-  arenaSlots:
-  - {fileID: 1760246168}
-  - {fileID: 490872682}
-  - {fileID: 1798081638}
-  - {fileID: 2011486258}
-  - {fileID: 1523970359}
-  - {fileID: 1324270501}
-  - {fileID: 175985700}
-  - {fileID: 996928836}
-  - {fileID: 912223686}
-  - {fileID: 966768915}
-  - {fileID: 682851260}
-  - {fileID: 1065403913}
-  - {fileID: 130809498}
-  - {fileID: 1744267808}
-  - {fileID: 59938503}
+  cardPlacePoints:
   - {fileID: 278685400}
   - {fileID: 645640356}
   - {fileID: 354838283}
@@ -2185,6 +2220,21 @@ MonoBehaviour:
   - {fileID: 2011907650}
   - {fileID: 478171436}
   - {fileID: 1694141708}
+  - {fileID: 682851260}
+  - {fileID: 1065403913}
+  - {fileID: 130809498}
+  - {fileID: 1744267808}
+  - {fileID: 59938503}
+  - {fileID: 1760246168}
+  - {fileID: 490872682}
+  - {fileID: 1798081638}
+  - {fileID: 2011486258}
+  - {fileID: 1523970359}
+  - {fileID: 1324270501}
+  - {fileID: 175985700}
+  - {fileID: 996928836}
+  - {fileID: 912223686}
+  - {fileID: 966768915}
 --- !u!1 &828274618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,7 +2473,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -2448,6 +2498,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 1
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,7 +2745,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -2715,6 +2770,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 1
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &974128491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,7 +3003,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -2968,6 +3028,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 1
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &1065403909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,6 +3163,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 1
 --- !u!1 &1246032256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,7 +3518,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -3473,6 +3543,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 1
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &1423174442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,7 +3632,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -3582,6 +3657,11 @@ MonoBehaviour:
   canSpawnHere: 1
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 1
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!65 &1423174446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3708,7 +3788,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -3733,6 +3813,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 1
+  isTerrainLane: 0
 --- !u!1 &1613324295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,7 +4030,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -3970,6 +4055,11 @@ MonoBehaviour:
   canSpawnHere: 1
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 1
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!65 &1693556860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4075,7 +4165,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -4100,6 +4190,11 @@ MonoBehaviour:
   canSpawnHere: 1
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 1
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!65 &1694141709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4251,6 +4346,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 1
 --- !u!1 &1760246164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,7 +4456,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -4381,6 +4481,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 1
+  isTerrainLane: 0
 --- !u!1 &1798081634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4486,7 +4591,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -4511,6 +4616,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 1
+  isTerrainLane: 0
 --- !u!1 &1840197375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4667,7 +4777,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -4692,6 +4802,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 1
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!1 &2011486254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4797,7 +4912,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6698113, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -4822,6 +4937,11 @@ MonoBehaviour:
   canSpawnHere: 0
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 0
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 1
+  isTerrainLane: 0
 --- !u!1 &2011907647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,7 +5026,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 29103a66d1b31154eb0fd9e23a794be6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.679605, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -4931,6 +5051,11 @@ MonoBehaviour:
   canSpawnHere: 1
   line: 0
   row: 0
+  isPlayerAttackLane: 0
+  isPlayerDefenseLane: 1
+  isEnemyAttackLane: 0
+  isEnemyDefenseLane: 0
+  isTerrainLane: 0
 --- !u!65 &2011907651
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using static BattleController;
 using static UnityEngine.Rendering.DebugUI.Table;
 
 public class ArenaController : MonoBehaviour
 {
     public static ArenaController arenaController;
 
-    [SerializeField] private CardPlacePoint[] arenaSlots;
-    public CardPlacePoint[,] arena = new CardPlacePoint[5, 5];
-    public bool[,] virtualArena = new bool[11, 11];
+    [SerializeField] private CardPlacePoint[] cardPlacePoints;
+    private CardPlacePoint[,] playerArenaSlots = new CardPlacePoint[2, 5];
+    private CardPlacePoint[,] terrainArenaSlots = new CardPlacePoint[1, 5];
+    private CardPlacePoint[,] oponentArenaSlots = new CardPlacePoint[2, 5];
 
     private void Awake()
     {
@@ -30,80 +32,85 @@ public class ArenaController : MonoBehaviour
 
     public void SetArena()
     {
-        int counter = 0;
-        
-        for (int i = 0; i < arena.GetLength(0); i++)
+       int counterA = 0, counterB = 0, counterC = 0, counterD = 0, counterE = 0;
+
+        for (int i = 0; i < cardPlacePoints.Length; i++)
         {
-            for (int j = 0; j < arena.GetLength(1); j++)
+            if (cardPlacePoints[i].isEnemyDefenseLane)
             {
-                if (counter >= arenaSlots.Length) return;
-
-                arena[i, j] = arenaSlots[counter];
-                arena[i, j].line = i;
-                arena[i, j].row = j;
-
-                counter++;
+                oponentArenaSlots[1, counterA] = cardPlacePoints[i];
+                cardPlacePoints[i].line = 1;
+                cardPlacePoints[i].row = counterA;
+                counterA++;
             }
+            else if (cardPlacePoints[i].isEnemyAttackLane)
+            {
+                oponentArenaSlots[0, counterB] = cardPlacePoints[i];
+                cardPlacePoints[i].line = 0;
+                cardPlacePoints[i].row = counterB;
+                counterB++;
+            }
+            else if (cardPlacePoints[i].isTerrainLane)
+            {
+                terrainArenaSlots[0, counterC] = cardPlacePoints[i];
+                cardPlacePoints[i].line = 0;
+                cardPlacePoints[i].row = counterC;
+                counterC++;
+            }
+            else if (cardPlacePoints[i].isPlayerAttackLane)
+            {
+                playerArenaSlots[0, counterD] = cardPlacePoints[i];
+                cardPlacePoints[i].line = 0;
+                cardPlacePoints[i].row = counterD;
+                counterD++;
+            }
+            else if (cardPlacePoints[i].isPlayerDefenseLane)
+            {
+                playerArenaSlots[1, counterE] = cardPlacePoints[i];
+                cardPlacePoints[i].line = 1;
+                cardPlacePoints[i].row = counterE;
+                counterE++;
+            }
+
         }
 
-        for (int i = 0; i < virtualArena.GetLength(0); i++)
-        {
-            for (int j = 0; j < virtualArena.GetLength(1); j++)
-            {
-                if (i < 3 || j < 3 || i > virtualArena.GetLength(0) - 4 || j > virtualArena.GetLength(1) - 4)
-                {
-                    virtualArena[i, j] = false;
-                }
-                else
-                {
-                    virtualArena[i, j] = true;
-                }
-
-            }
-        }
     }
 
-    public void UpdateArena(int line, int row)
-    {
+
+    //public void ShowAvaiablePositions(Card card, int movement = 2)
+    //{
+    //    int line = card.assignPlace.line;
+    //    int row = card.assignPlace.row;
+    //    int virtualLine = line + 3;
+    //    int virtualRow = row + 3;
        
-        virtualArena[line + 3, row + 3] = false;
-        
-    }
 
-    public void ShowAvaiablePositions(Card card, int movement = 2)
-    {
-        int line = card.assignPlace.line;
-        int row = card.assignPlace.row;
-        int virtualLine = line + 3;
-        int virtualRow = row + 3;
-       
-
-        for (int i = 0; i < movement + 1; i++)
-        {
-            //Checagem Vertical
-            if (virtualArena[virtualLine + i, virtualRow] == true)
-            {
-                arena[line + i, row].ChangeColor(true);
-            }
+    //    for (int i = 0; i < movement + 1; i++)
+    //    {
+    //        //Checagem Vertical
+    //        if (virtualArena[virtualLine + i, virtualRow] == true)
+    //        {
+    //            arena[line + i, row].ChangeColor(true);
+    //        }
             
-            if (virtualArena[virtualLine - i, virtualRow] == true)
-            {
-                arena[line - i, row].ChangeColor(true);
-            }
+    //        if (virtualArena[virtualLine - i, virtualRow] == true)
+    //        {
+    //            arena[line - i, row].ChangeColor(true);
+    //        }
 
-            if (virtualArena[virtualLine, virtualRow + i] == true)
-            {
-                arena[line, row + i].ChangeColor(true);
-            }
+    //        if (virtualArena[virtualLine, virtualRow + i] == true)
+    //        {
+    //            arena[line, row + i].ChangeColor(true);
+    //        }
             
-            if (virtualArena[virtualLine, virtualRow - i] == true)
-            {
-                arena[line, row - i].ChangeColor(true);
-            }
+    //        if (virtualArena[virtualLine, virtualRow - i] == true)
+    //        {
+    //            arena[line, row - i].ChangeColor(true);
+    //        }
 
-        }
+    //    }
 
-    }
+    //}
 
 
 }
